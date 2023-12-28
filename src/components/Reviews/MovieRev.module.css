@@ -1,0 +1,77 @@
+.reviewsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .reviewList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .reviewItem {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 2px 4px 4px black;
+    transition: box-shadow 0.5s;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  }
+  .reviewItem:hover{
+    box-shadow: 1px 1px 1px black;
+  }
+  
+  .author {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+  }
+  
+  .noReviews {
+    text-align: center;
+  }
+  
+  .searchLink {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .searchLink:hover {
+    background-color: #2980b9;
+  }
+  .goBackLink {
+    background-color: #10f871;
+    color: #2e0909;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    transition: background-color 0.3s, box-shadow 0.5s;
+    text-decoration: none;
+    box-shadow: 2px 4px 4px black;
+  }
+  
+  .goBackLink:hover {
+    background-color: #27ae60;
+    box-shadow: 0px 1px 1px black;
+  }
+  .hiddenLink {
+    display: none;
+  }

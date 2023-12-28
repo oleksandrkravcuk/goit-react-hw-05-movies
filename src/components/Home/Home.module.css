@@ -1,0 +1,39 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .movieList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .movieListItem {
+    margin-bottom: 10px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px black;
+    transition: box-shadow 0.5s;
+  }
+  .movieListItem:hover{
+    box-shadow: 1px 1px 1px black;
+  }
+  
+  .movieLink {
+    text-decoration: none;
+    color: #164655;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .movieLink:hover {
+    color: #470642;
+  }
+  .htext{
+    color: aqua;
+    font-size: 30px;
+    font-style: italic;
+  }

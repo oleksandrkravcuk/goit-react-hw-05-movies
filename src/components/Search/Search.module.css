@@ -1,0 +1,83 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px;
+    transition: all 0.5s;
+  }
+  .container:hover{
+    max-width: 650px;
+  }
+
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-right: 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    box-shadow: 4px 6px 6px black;
+  }
+  
+  .movieList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #164655;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .movieListItem {
+    margin-bottom: 10px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px black;
+    transition: box-shadow 0.5s;
+  }
+  .movieListItem:hover {
+    box-shadow: 0 1px 1px black;
+  }
+  
+  .movieLink {
+    display: block;
+    text-decoration: none;
+    color: #164655;
+    font-weight: bold;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .movieLink:hover {
+    color: #2980b9;
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+  }
+  .input {
+    padding: 10px;
+    flex-grow: 1;
+  }
+  .searchButton {
+    background-color: #30c035;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.4s, box-shadow 0.4s;
+    box-shadow: 4px 8px 8px black;
+  }
+  
+  .searchButton:hover {
+    background-color: #45a049;
+    box-shadow: 1px 2px 2px black; 
+  }

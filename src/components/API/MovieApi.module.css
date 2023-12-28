@@ -1,0 +1,78 @@
+.creditsContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .creditList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .creditItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 30px;
+    box-shadow: 2px 4px 4px black;
+    transition: box-shadow 0.5s;
+  }
+  .creditItem:hover{
+    box-shadow: 0 1px 1px black;
+  }
+  
+  .creditImage {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-right: 20px;
+  }
+  
+  .creditInfo {
+    flex-grow: 1;
+  }
+  
+  .creditName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .creditCharacter {
+    font-size: 18px;
+    color: #555;
+  }
+  .noImagePlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    background-color: #eee;
+    color: #888;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  .goBackLink {
+    background-color: #10f871;
+    color: #200606;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, box-shadow 0.5s;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 4px 4px black;
+  }
+  
+  .goBackLink:hover {
+    background-color: #27ae60;
+    box-shadow: 0 1px 1px black;
+  }
