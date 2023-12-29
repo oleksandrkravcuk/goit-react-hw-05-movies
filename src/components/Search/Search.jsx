@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import styles from './Search.module.css';
 
+
 const apiKey = 'eed14fd55202ee0e89c15a259f6aa876';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [value, setValue] = useState(searchParams.get('query') || '');
   const [files, setFiles] = useState([]);
-  const [searchClicked, setSearchClicked] = useState(false);
   const location = useLocation();
   const query = searchParams.get('query') || '';
 
   const handleSearch = () => {
     setSearchParams({ query: value });
-    setSearchClicked(true);
 
     if (!value) {
       setFiles([]); 
@@ -36,7 +35,7 @@ const Movies = () => {
   };
 
   useEffect(() => {
-    if (!query || !searchClicked) {
+    if (!query) {
       return;
     }
 
@@ -49,7 +48,7 @@ const Movies = () => {
         setFiles(info.results);
       })
       .catch(error => console.error('Error fetching movies:', error));
-  }, [query, searchClicked]);
+  }, [query, ]);
 
   const fetchSearchMovie = (query) => {
     return fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`)
@@ -60,20 +59,25 @@ const Movies = () => {
     setValue(e.target.value);
   };
 
+
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
-        <input
+      <input
+          name="inputData"
           className={styles.input}
           type="text"
           value={value}
-          onChange={handleInputChange}
+          onChange= {handleInputChange}
+          autoComplete="off"
+          autoFocus
+          placeholder="Search movies"
         />
         <button type="submit" className={styles.searchButton}>
-          Search
+          <span>Search</span>
         </button>
       </form>
-      {searchClicked && (
+      {files.length > 0 && (
         <ul className={styles.movieList}>
           {files.map(({ title, id }) => (
           <li key={id} className={styles.movieListItem}>
